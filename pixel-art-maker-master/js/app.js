@@ -7,15 +7,14 @@ $('#sizePicker').submit(function (event) {
     event.preventDefault();
     height = $('#inputHeight').val();
     width = $('#inputWidth').val();
-    makeGrid(height, width);
-    // console.log('height: '+ height + 'and width: ' + width);   
+    makeGrid(height, width);  
 })
 
 
 function makeGrid(x, y) {
     $('tr').remove();
 
-    // Code goes here!
+    // Code goes here
     for (var i = 1; i <= x; i++) {
         $('#pixelCanvas').append('<tr id=table' + i + '></tr>'); 
         for (var j = 1; j <=y; j++) {
@@ -23,7 +22,7 @@ function makeGrid(x, y) {
         }  
     }
 
-    // add color to cell
+    // color to cells
     $('td').click(function addColor() {
         color = $('#colorPicker').val();
 
